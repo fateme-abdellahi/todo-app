@@ -141,5 +141,7 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'register':'5/minute',
         'create': '5/minute',
+        'update':'5/minute',
+        
     }
 }

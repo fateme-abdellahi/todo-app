@@ -13,8 +13,10 @@ class ListToDOItemView(generics.ListAPIView):
     ordering_fields=["title","created","updated","end_date"]
     throttle_scope="list"
     
+    
     def get_queryset(self):
         return models.ToDo.objects.filter(user=self.request.user)
+    
     
     
 class CreateToDoItemView(generics.ListCreateAPIView):
@@ -24,4 +26,14 @@ class CreateToDoItemView(generics.ListCreateAPIView):
     
     def get_queryset(self):
         return models.ToDo.objects.filter(user=self.request.user)
+    
+
+class UpdataToDoItemView(generics.UpdateAPIView):
+    permission_classes=[permissions.IsAuthenticated]
+    throttle_scope="update"
+    serializer_class=serializers.ItemSerializer
+    
+    def get_queryset(self):
+        return models.ToDo.objects.filter(user=self.request.user)
+    
     
