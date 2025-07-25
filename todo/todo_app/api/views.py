@@ -8,15 +8,20 @@ class ListToDOItemView(generics.ListAPIView):
     permission_classes=[permissions.IsAuthenticated]
     serializer_class=serializers.ItemSerializer
     pagination_class=paginations.ToDOListPagination
-    
     filter_backends=[filters.SearchFilter,filters.OrderingFilter]
     search_fields=['title']
     ordering_fields=["title","created","updated","end_date"]
-    
     throttle_scope="list"
     
     def get_queryset(self):
         return models.ToDo.objects.filter(user=self.request.user)
     
-
+    
+class CreateToDoItemView(generics.ListCreateAPIView):
+    permission_classes=[permissions.IsAuthenticated]
+    throttle_scope="create" 
+    serializer_class=serializers.ItemSerializer
+    
+    def get_queryset(self):
+        return models.ToDo.objects.filter(user=self.request.user)
     
