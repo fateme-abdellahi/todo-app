@@ -1,8 +1,14 @@
+from django.http import HttpResponse
 from rest_framework import generics,permissions,filters
 from . import serializers
 from .. import models
 from . import paginations
 
+def index(request):
+    return HttpResponse("""
+        <h1>Welcome To This Task Tracker Project</h1>
+        <p>View the code and details on my github accout <a href="https://github.com/fateme-abdellahi/todo-app">here</a></p>
+    """)
 
 class ListToDOItemView(generics.ListAPIView):
     permission_classes=[permissions.IsAuthenticated]
