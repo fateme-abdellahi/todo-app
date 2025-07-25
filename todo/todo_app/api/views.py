@@ -35,5 +35,12 @@ class UpdataToDoItemView(generics.UpdateAPIView):
     
     def get_queryset(self):
         return models.ToDo.objects.filter(user=self.request.user)
+
+
+class DeleteToDoItemView(generics.DestroyAPIView):
+    permission_classes=[permissions.IsAuthenticated]
+    serializer_class=serializers.ItemSerializer
     
+    def get_queryset(self):
+        return models.ToDo.objects.filter(user=self.request.user)
     
