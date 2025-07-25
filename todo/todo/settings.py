@@ -139,9 +139,9 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.ScopedRateThrottle',
     ],
     'DEFAULT_THROTTLE_RATES': {
+        'list':'1/second',
         'register':'5/minute',
         'create': '5/minute',
         'update':'5/minute',
-        
     }
 }
