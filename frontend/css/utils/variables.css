@@ -1,0 +1,27 @@
+:root {
+    /* --main-color: #4CAF50;
+    --secondary-color: #333;
+    --font-size-base: 16px;
+    --border-radius: 8px; */
+    --card-bg-color: rgb(32 47 63 / 90%);
+    --card-bg-color-inactive: rgb(35 45 55 / 46%);
+    --card-bg-color-hover: rgb(68 80 92 / 90%);
+    --card-header-bg-color: rgba(23, 29, 35, 0.737);
+    --font-color: #c6cbd0;
+    --error-color: #a50c0c;
+    --red-button: #9b1515;
+    --red-button-hover: #aa2525;
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: cursive, sans-serif;
+    }
+
+    html,
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+}
