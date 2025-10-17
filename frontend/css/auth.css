@@ -3,57 +3,11 @@
     flex-wrap: wrap;
 }
 
-.form {
-    flex: 1;
-    min-width: 400px;
-    max-width: 600px;
-    margin-left: auto;
-    padding: 35px;
-    background-color: rgb(24 30 36);
-    color: #c6cbd0;
-    font-size: 18px;
-    font-weight: 400;
-
-}
-
-.form input:focus {
-    border: 3px solid #7878a5;
-    outline: none;
-}
-
-.form input {
-    display: block;
-    width: 100%;
-    height: 41px;
-    border: 2px solid rgb(193 196 201);
-    border-radius: 5px;
-    background-color: #cdd1d4;
-    margin-bottom: 24px;
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 16px;
-}
-
-
-.form button {
-    width: 100%;
-    height: 47px;
-    border: none;
-    border-radius: 7px;
-    background-color: #43444e;
-    color: #ffffff;
-    font-family: cursive, sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-.form button:hover {
-    background-color: #52535c;
+html {
+    overflow: hidden;
 }
 
 .form-image {
-    display: relative;
     flex: 1;
     min-width: 600px;
 
@@ -78,26 +32,8 @@
         width: 100%;
     }
 
-    .form {
-        position: absolute;
-        top: 10vh;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 50%;
-        padding: 35px;
-        background-color: rgb(24 30 36);
-        color: #c6cbd0;
-        opacity: 0.9;
-    }
-
     .form.login-form {
         top: 26vh;
-    }
-
-    .form input:focus {
-        border: 3px solid #7878a5;
-        outline: none;
     }
 
     .form-image {
