@@ -104,6 +104,10 @@ body {
         opacity: 0.9;
     }
 
+    .form.login-form {
+        top: 26vh;
+    }
+
     .form input:focus {
         border: 3px solid #7878a5;
         outline: none;
