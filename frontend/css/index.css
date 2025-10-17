@@ -7,6 +7,10 @@ body {
     background-attachment: fixed;
 }
 
+.container span.empty {
+    width: 50px;
+}
+
 .container {
     margin: auto;
     margin-top: 10vh;

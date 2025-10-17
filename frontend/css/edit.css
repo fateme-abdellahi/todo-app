@@ -1,3 +1,8 @@
+body {
+    background-image: url(../images/7.png);
+    background-position-y: center;
+}
+
 .checkbox-container {
     display: flex;
     justify-content: start;
