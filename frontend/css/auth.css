@@ -17,9 +17,8 @@ body {
 .form {
     flex: 1;
     min-width: 400px;
-    max-width: 700px;
+    max-width: 600px;
     margin-left: auto;
-    width: 50%;
     padding: 35px;
     background-color: rgb(24 30 36);
     color: #c6cbd0;
