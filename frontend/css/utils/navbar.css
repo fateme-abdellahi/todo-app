@@ -8,11 +8,16 @@
     top: 0;
     width: 100%;
     padding: 20px 53px !important;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-items-container {
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    max-width: 1000px;
+    min-width: 270px;
 }
 
 .navbar-items-container li {
