@@ -1,0 +1,40 @@
+@import url(./variables.css);
+
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(39, 40, 46);
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.modal {
+    display: none !important;
+    position: absolute;
+    top: 30vh;
+    background-color: rgb(16 19 21 / 66%);
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: var(--font-color);
+    z-index: 3;
+    padding: 10px;
+}
+
+.modal>* {
+    margin: 10px 20px;
+}
+
+.modal img:hover {
+    cursor: pointer;
+}
+
+.modal button {
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
