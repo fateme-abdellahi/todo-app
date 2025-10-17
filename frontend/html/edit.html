@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/utils/base.css">
+    <link rel="stylesheet" href="../css/utils/variables.css">
+    <link rel="stylesheet" href="../css/utils/navbar.css">
+    <link rel="stylesheet" href="../css/utils/form.css">
+    <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="../css/edit.css">
+    <title>Edit Task</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-items-container">
+                <li>
+                    <a class="link-disabled">Create task</a>
+                </li>
+                <li>
+                    <a>Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <form class="form">
+            <label>Title</label>
+            <input type="text" required>
+
+            <label>Description</label>
+            <textarea></textarea>
+
+            <label>End Date</label>
+            <input type="datetime-local">
+
+            <div class="checkbox-container">
+                <label id="completed-label" for="completed">Task Is Completed</label>
+                <input type="checkbox" id="completed">
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
