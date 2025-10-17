@@ -1,0 +1,24 @@
+@import url(./utils/variables.css);
+
+body {
+    background-image: url(../images/5.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    align-content: center;
+    margin: auto;
+    margin-top: 40vh;
+    background-color: var(--card-bg-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    height: 30vh;
+    color: var(--font-color);
+    width: 90%;
+}
