@@ -1,0 +1,74 @@
+@import url(utils/variables.css);
+
+body {
+    background-image: url(../images/3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container span.empty {
+    width: 50px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 10vh;
+    width: 70%;
+    min-width: 400px;
+    font-size: medium;
+    color: var(--font-color);
+}
+
+.item-container {
+    background-color: var(--card-bg-color);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.item-container:hover {
+    background-color: var(--card-bg-color-hover);
+    cursor: pointer;
+}
+
+.item-container span {
+    font-size: small;
+    width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.items-header-container {
+    font-size: small;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-header-bg-color);
+}
+
+.items-header-container * {
+    display: block;
+    width: 80px;
+}
+
+.item-delete-button {
+    background-color: var(--red-button);
+    color: var(--font-color);
+    border: none;
+    padding: 1px 5px 3px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.item-delete-button:hover {
+    background-color: var(--red-button-hover);
+    cursor: pointer;
+}
+
+.item-container-completed {
+    background-color: var(--card-bg-color-inactive);
+}

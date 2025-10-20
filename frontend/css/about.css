@@ -1,0 +1,20 @@
+body {
+    background-image: url(../images/8.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    font-size: large;
+}
+
+.container a {
+    text-decoration: none;
+    color: #0d0e17
+}
+
+.container a:hover {
+    color: #3b3f5a
+}

@@ -1,0 +1,21 @@
+body {
+    background-image: url(../images/7.png);
+    background-position-y: center;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: start;
+    margin: 30px 0;
+}
+
+.checkbox-container label {
+    font-size: medium;
+    align-content: end;
+}
+
+.checkbox-container input {
+    margin: 0 20px;
+    width: 25px;
+    height: 25px;
+}

@@ -1,0 +1,48 @@
+@import url(./utils/variables.css);
+
+body {
+    background-image: url(../images/6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: bottom;
+    overflow: hidden;
+}
+
+.form {
+    margin: auto;
+    margin-top: 14vh;
+    background-color: var(--form-transparent-bg-color);
+}
+
+.form textarea {
+    width: 100%;
+    height: 15vh;
+    border-radius: var(--form-input-radius);
+    background-color: var(--form-input-bg-color);
+    outline: none;
+    padding: var(--form-input-padding);
+    margin-top: 8px;
+    margin-bottom: 23px;
+
+}
+
+.form textarea:focus {
+    border: var(--form-input-border-size-focus) solid var(--form-input-focus-border-color);
+}
+
+@media (width<1014px) {
+
+    .form {
+        margin-top: 4vh;
+    }
+}
+
+@media (width<500px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
