@@ -32,6 +32,10 @@ body {
     border: var(--form-input-border-size-focus) solid var(--form-input-focus-border-color);
 }
 
+.error {
+    color: var(--error-color);
+}
+
 @media (width<1014px) {
 
     .form {

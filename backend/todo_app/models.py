@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class ToDo(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="todo_items")
-    title = models.CharField(max_length=70, unique=True)
+    title = models.CharField(max_length=70)
     description = models.TextField(null=True)
     completed = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)

@@ -32,19 +32,23 @@
         </nav>
     </header>
     <div>
-        <form class="form">
+        <form class="form" id="form">
             <label>Title</label>
-            <input type="text" required>
+            <input id="title" type="text" required>
 
             <label>Description</label>
-            <textarea></textarea>
+            <textarea id="description" required></textarea>
 
             <label>End Date</label>
-            <input type="datetime-local">
+            <input id="datetime" type="datetime-local" required>
 
-            <button>Submit</button>
+            <button id="sumbit-btn">Submit</button>
+
+            <div class="error" id="error"></div>
         </form>
     </div>
+    <script src="../config.js"></script>
+    <script src="../js/create.js"></script>
 </body>
 
 </html>
