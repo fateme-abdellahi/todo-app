@@ -33,15 +33,15 @@
         </nav>
     </header>
     <div>
-        <form class="form">
+        <form class="form" id="form">
             <label>Title</label>
-            <input type="text" required>
+            <input id="title" type="text">
 
             <label>Description</label>
-            <textarea></textarea>
+            <textarea id="description"></textarea>
 
             <label>End Date</label>
-            <input type="datetime-local">
+            <input id="datetime" type="datetime-local">
 
             <div class="checkbox-container">
                 <label id="completed-label" for="completed">Task Is Completed</label>
@@ -49,8 +49,11 @@
             </div>
 
             <button>Submit</button>
+            <div class="error" id="error"></div>
         </form>
     </div>
+    <script src="../config.js"></script>
+    <script src="../js/edit.js"></script>
 </body>
 
 </html>
