@@ -14,12 +14,13 @@
 
 <body>
 
-    <div class="overlay"></div>
 
-    <div class="modal">
-        <div><img src="../images/icons/false.svg" alt="close" width="20" height="20"></div>
+    <div class="overlay none"></div>
+
+    <div class="modal none">
+        <div id="modal-close"><img src="../images/icons/false.svg" alt="close" width="20" height="20"></div>
         <div>Are you sure you want to delete this task?</div>
-        <button class="item-delete-button">delete</button>
+        <button id="modal-delete-btn" class="item-delete-button">delete</button>
     </div>
 
     <header>
@@ -40,180 +41,12 @@
             </ul>
         </nav>
     </header>
+
     <div class="container">
-
-        <div class="items-header-container">
-            <span>Title</span>
-            <span>Description</span>
-            <span>Duo Date</span>
-            <span>Task Completed</span>
-            <span class="empty"></span>
-        </div>
-
-
-        <!-- href= an item with its id (task/id) -->
-        <!-- inside each individual item there is full info and edit info -->
-
-        <!-- a completed task -->
-        <div class="item-container item-container-completed">
-            <span>title</span>
-            <span title="a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.">a long description Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/true.svg" alt="yes" width="20" height="20"></span>
-            <button class="item-delete-button">delete</button>
-        </div>
-
-
-        <!-- an incomplete task  -->
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/waiting.png" alt="no" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <!-- these are expired tasks -->
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
-
-        <div class="item-container">
-            <span>a long tiltle Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quia at
-                corporis sit ipsam vel praesentium reprehenderit facere vero eveniet alias asperiores distinctio et
-                facilis quae, autem recusandae molestias?</span>
-            <span>a long description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias
-                repellendus, commodi ab, harum consectetur vero ipsam exercitationem officiis voluptate fugiat sequi
-                aspernatur impedit perferendis consequuntur soluta? Unde, deserunt rerum.</span>
-            <span>01/01/2025</span>
-            <span><img src="../images/icons/false.svg" alt="yes" width="20" height="20"></span>
-
-            <button class="item-delete-button">delete</button>
-        </div>
     </div>
+    <div class="error none">something went wrong...</div>
+    <script src="../config.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

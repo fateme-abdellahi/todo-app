@@ -72,3 +72,12 @@ body {
 .item-container-completed {
     background-color: var(--card-bg-color-inactive);
 }
+
+.error {
+    color: var(--error-color);
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 10vh;
+}

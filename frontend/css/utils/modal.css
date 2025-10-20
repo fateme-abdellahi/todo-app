@@ -2,7 +2,6 @@
 
 
 .overlay {
-    display: none;
     position: absolute;
     top: 0;
     height: 100vh;
@@ -13,7 +12,6 @@
 }
 
 .modal {
-    display: none !important;
     position: absolute;
     top: 30vh;
     background-color: rgb(16 19 21 / 66%);
