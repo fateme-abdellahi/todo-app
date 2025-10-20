@@ -1,48 +1,35 @@
-const form = document.getElementById("register-form");
+const form = document.getElementById("form");
 
 const htmlError = document.getElementById("error");
 
 const { BASE_API_URL } = CONFIG;
 
-const BACKEND_URL = `${BASE_API_URL}/auth/register/`;
+const BACKEND_URL = `${BASE_API_URL}/auth/login/`;
 
 
 setError = (error) => {
     htmlError.textContent = error
 }
-validateData = (username, password, password2, email) => {
+validateData = (username, password) => {
     if (!username) {
         return "username cannot be empty";
     }
     if (!password || !password.trim()) {
         return "password cannot be empty";
     }
-    if (password2 !== password) {
-        return "passwords are not the same";
-    }
-    if (!email) {
-        return "email cannot be empty";
-    }
     if (password.length < 8) {
         return "password length is less than 8 characters";
-    }
-    if (password !== password2) {
-        return "passwords are not the same";
     }
     return null
 }
 
-const errorHandler = (data) => {
-    if (data.username) {
-        setError(data.username.join(" "));
+const errorHandler = (error) => {
+    if (error.username) {
+        setError(error.username?.join(" "));
         return;
     }
-    if (data.password) {
+    if (error.password) {
         setError("password must be an string more than 8 characters");
-        return;
-    }
-    if (data.email) {
-        setError("please enter your email correctly");
         return;
     }
     if (error.non_field_errors) {
@@ -50,7 +37,7 @@ const errorHandler = (data) => {
         return;
     }
     if (error) {
-        setError(String(data));
+        setError(error);
     }
 }
 
@@ -58,10 +45,8 @@ form.addEventListener("submit", async (e) => {
     e.preventDefault()
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value;
-    const password2 = document.getElementById("password2").value;
-    const email = document.getElementById("email").value.trim();
 
-    error = validateData(username, password, password2, email);
+    error = validateData(username, password);
 
     if (error) {
         setError(error)
@@ -74,8 +59,6 @@ form.addEventListener("submit", async (e) => {
             body: JSON.stringify({
                 username,
                 password,
-                password2,
-                email
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -84,15 +67,16 @@ form.addEventListener("submit", async (e) => {
 
         const data = await response.json();
 
-        if (response.status == 201) {
+        if (response.status == 200) {
             localStorage.setItem("token", data.token);
             window.location.href = "index.html";
         } else if (response.status == 400) {
             errorHandler(data);
         } else {
-            setError("something went wrong");
+            setError("something went wrong....");
         }
-    } catch {
+    }
+    catch {
         setError("something went wrong");
     }
 })
