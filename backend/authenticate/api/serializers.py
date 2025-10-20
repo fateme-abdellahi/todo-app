@@ -5,17 +5,16 @@ from .. import models
 
 
 class UserSerializer(serializers.ModelSerializer):
-    password2 = serializers.CharField(write_only=True)
     image = serializers.ImageField(write_only=True, required=False, default=None)
 
     class Meta:
         model = User
-        fields = ["username", "password", "password2", "email", "image"]
+        fields = ["username", "password", "email", "image"]
         extra_kwargs = {"password": {"write_only": True}, "email": {"required": True}}
 
     def save(self, **kwargs):
-        if self.validated_data["password"] != self.validated_data["password2"]:
-            raise serializers.ValidationError({"password": "Passwords do not match."})
+        if len(self.validated_data["password"])<8:
+            raise serializers.ValidationError({"password":"Password length is less than 8 charachters"})
         user = User(
             username=self.validated_data["username"], email=self.validated_data["email"]
         )

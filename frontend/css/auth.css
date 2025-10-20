@@ -19,7 +19,6 @@ html {
 }
 
 .error {
-    display: none;
     color: var(--error-color);
     margin: 15px auto auto 2px;
 }

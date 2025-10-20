@@ -17,3 +17,7 @@ body {
     color: var(--font-color-disabled) !important;
     cursor: none;
 }
+
+.none {
+    display: none;
+}
