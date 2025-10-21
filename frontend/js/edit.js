@@ -44,7 +44,7 @@ form.addEventListener("submit", async (e) => {
     const title = document.getElementById("title")?.value.trim();
     const description = document.getElementById("description")?.value.trim();
     const datetime = document.getElementById("datetime")?.value;
-    const completed = document.getElementById("completed")?.value;
+    const completed = document.getElementById("completed")?.checked;
 
     const requestData = {}
 

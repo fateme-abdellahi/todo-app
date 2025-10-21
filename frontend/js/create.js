@@ -43,12 +43,12 @@ const errorHandler = (error) => {
 }
 
 
-// handle sumbit form
+// handle submit form
 form.addEventListener("submit", async (e) => {
     e.preventDefault()
-    const title = document.getElementById("title").value.trim();
-    const description = document.getElementById("description").value.trim();
-    const datetime = document.getElementById("datetime").value
+    const title = document.getElementById("title")?.value.trim();
+    const description = document.getElementById("description")?.value.trim();
+    const datetime = document.getElementById("datetime")?.value
 
     err = validateData(title, description, datetime);
 
