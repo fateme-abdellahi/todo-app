@@ -14,7 +14,7 @@ See each folder's README for instructions to run the backend and frontend.
 
 ## License
 
-MIT — see `LICENSE`.
+MIT — see [LICENSE](./LICENSE).
 
 ## Contact
 
