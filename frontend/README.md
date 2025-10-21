@@ -56,7 +56,7 @@ If your backend uses different paths, update the frontend JS or adapt your backe
 
 ## License
 
-MIT — see `../LICENSE`.
+MIT — see [LICENSE](../LICENSE).
 
 ---
 
